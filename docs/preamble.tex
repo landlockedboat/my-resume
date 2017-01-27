@@ -1,7 +1,39 @@
 \documentclass[a4paper,8pt]{article}
 \usepackage[a4paper]{geometry}
 \usepackage[utf8]{inputenc}
+% table manipulation, euro symbol
 \usepackage{array, eurosym}
+% working with images
+\usepackage{graphicx}
+\graphicspath{ {figs/} }
+
+
+% Tables used all along the document
+\newenvironment{atomtable}
+{\begin{tabular}{>{\bfseries \hfill} p{2cm} | p{12cm}}}
+{\end{tabular}}
+
+\makeatletter
+\renewcommand{\maketitle}
+{
+
+\noindent \begin{minipage}{0.6\textwidth}
+
+\underline{\Huge\@title}\\
+
+{\Large\@author}	\\	
+
+{\large\today}		\\
+
+\end{minipage}%
+\begin{minipage}{0.3\textwidth}
+	
+\includegraphics[scale=.8]{mugshot.png}
+
+\end{minipage}
+
+}
+\makeatother
 
 % I dont want numbers prefixed in the sections
 \makeatletter
