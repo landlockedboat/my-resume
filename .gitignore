@@ -1,4 +1,6 @@
-ore latex/pdflatex auxiliary files:
+release/
+aux/
+
 *.aux
 *.lof
 *.log
